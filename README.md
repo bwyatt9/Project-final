@@ -7,6 +7,6 @@ This project allows you to store this data in supa base as well, and uses chart.
 
 Meant for desktop but is RWD, meaning mobile friendly 
 
-LINK TO DEVELOPER MANUAL : docs/developer_manual.md
+LINK TO DEVELOPER MANUAL : [docs/developer_manual.md](https://github.com/bwyatt9/Project-final/blob/main/docs/developer_manual.md)
 
 Here is the VERCEL link to what I have currently running : 
