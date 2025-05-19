@@ -1,11 +1,16 @@
 {
-  "name": "league-tracker",
-  "version": "1.0.0",
-  "description": "INST377 League Tracker Final Project",
-  "type": "commonjs",
-  "dependencies": {
-    "express": "^4.18.2",
-    "node-fetch": "^2.6.7",
-    "@supabase/supabase-js": "^2.39.5"
-  }
+  "version": 2,
+  "builds": [
+    { "src": "api.js", "use": "@vercel/node" },
+    { "src": "toDB.js", "use": "@vercel/node" },
+    { "src": "fromDB.js", "use": "@vercel/node" },
+    { "src": "getMatchIds.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api", "dest": "/api.js" },
+    { "src": "/toDB", "dest": "/toDB.js" },
+    { "src": "/fromDB", "dest": "/fromDB.js" },
+    { "src": "/getMatchIds", "dest": "/getMatchIds.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
 }
