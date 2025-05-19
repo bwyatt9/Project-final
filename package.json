@@ -1,13 +1,11 @@
 {
   "name": "league-tracker",
   "version": "1.0.0",
-  "main": "api.js",
-  "scripts": {
-    "start": "node backend/api.js"
-  },
+  "description": "INST377 League Tracker Final Project",
+  "type": "commonjs",
   "dependencies": {
     "express": "^4.18.2",
-    "node-fetch": "^2.6.9",
-    "@supabase/supabase-js": "^2.0.0"
+    "node-fetch": "^2.6.7",
+    "@supabase/supabase-js": "^2.39.5"
   }
 }
