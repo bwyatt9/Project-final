@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About League Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+   
+      background: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Jinx_0.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      background-color: rgba(0, 0, 0, 0.8);
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #000;
+    }
+    h1 {
+      color: #FFD700;
+      text-align: center;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .champ {
+      display: block;
+      width: 100%;
+      margin-top: 2rem;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="stats.html">Stats</a>
+  </nav>
+  <main>
+    <h1>About League Tracker</h1>
+    <p>League Tracker is a simple web app I created for a class project. I wanted to build something kind of fun and useful while still hitting all the project requirements.</p>
+    <p>You can search for any League of Legends player by their Riot ID and Tagline, and then it pulls their most recent match data using Riot’s API. We also store the match info in Supabase, so you can view or reuse it later. For the stats page, Chart.js is used.</p>
+    <img class="champ" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Lux_0.jpg" alt="Lux">
+  </main>
+</body>
+</html>

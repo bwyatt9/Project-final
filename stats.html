@@ -1,0 +1,85 @@
+
+<html>
+<head>
+  <title>Stats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      background: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yasuo_0.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      color: #FFD700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      background-color: rgba(0, 0, 0, 0.8);
+      max-width: 700px;
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #000;
+    }
+    h1 {
+      color: #FFD700;
+      text-align: center;
+    }
+    canvas {
+      margin: 2rem 0;
+    }
+    .champ {
+      display: block;
+      width: 100%;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="stats.html">Stats</a>
+  </nav>
+  <main>
+    <h1>Match Stats</h1>
+    <p>This page is just a sample chart using dummy data for now. The Riot API doesn’t let you pull full team match history easily, but I wanted to include some kind of visual with Chart.js anyway.</p>
+
+    <canvas id="kdaChart" width="400" height="200"></canvas>
+
+    <p style="margin-top: 2rem;"></p>
+    <img class="champ" src="https://ddragon.leagueoflegends.com/cdn/img/champion/loading/Zed_0.jpg" alt="Zed">
+  </main>
+
+  <script>
+    const ctx = document.getElementById("kdaChart").getContext("2d");
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Top', 'Jungle', 'Mid', 'ADC', 'Support'],
+        datasets: [{
+          label: 'Wins by Role',
+          data: [3, 4, 2, 1, 5],
+          backgroundColor: 'rgba(255, 215, 0, 0.7)'
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
